@@ -3,6 +3,7 @@ export type DesignerTypeId = 'explorer' | 'artisan' | 'architect';
 export type DesignerType = {
   id: DesignerTypeId;
   emoji: string;
+  image: string;
   name: string;
   summary: string;
   description: string;
@@ -19,10 +20,13 @@ type QuestionOption = {
   type: DesignerTypeId;
 };
 
+export const START_IMAGE = '/images/start.jpg';
+
 export const DESIGNER_TYPES: Record<DesignerTypeId, DesignerType> = {
   explorer: {
     id: 'explorer',
     emoji: '🔍',
+    image: '/images/explorer.jpg',
     name: '탐험가형 디자이너',
     summary: '"왜?"라는 질문으로 문제의 본질을 찾아내요',
     description:
@@ -32,6 +36,7 @@ export const DESIGNER_TYPES: Record<DesignerTypeId, DesignerType> = {
   artisan: {
     id: 'artisan',
     emoji: '🎨',
+    image: '/images/solver.jpg',
     name: '감각파형 디자이너',
     summary: '1px의 차이로 완성도를 끌어올려요',
     description:
@@ -41,6 +46,7 @@ export const DESIGNER_TYPES: Record<DesignerTypeId, DesignerType> = {
   architect: {
     id: 'architect',
     emoji: '🧩',
+    image: '/images/architect.jpg',
     name: '설계자형 디자이너',
     summary: '흩어진 조각을 단단한 시스템으로 엮어요',
     description:

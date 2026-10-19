@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   FlexBox,
   ProgressIndicator,
@@ -32,7 +33,9 @@ const QuestionScreen = ({ step, selected, onSelect, onBack }: QuestionScreenProp
         {step + 1} / {total}
       </TopNavigation>
 
-      <ProgressIndicator percent={((step + 1) / total) * 100} sx={{ margin: '0 20px' }} />
+      <Box sx={{ padding: '0 20px' }}>
+        <ProgressIndicator percent={((step + 1) / total) * 100} />
+      </Box>
 
       <FlexBox flexDirection="column" gap={40} sx={{ flex: 1, padding: '32px 20px' }}>
         <FlexBox flexDirection="column" gap={8}>

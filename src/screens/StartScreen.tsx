@@ -2,7 +2,7 @@ import { Box, Button, FlexBox, Typography } from '@montage-ui/core';
 
 import BottomActions from '../components/BottomActions';
 import ImagePlaceholder from '../components/ImagePlaceholder';
-import { QUESTIONS } from '../data/quiz';
+import { QUESTIONS, START_IMAGE } from '../data/quiz';
 
 type StartScreenProps = {
   onStart: () => void;
@@ -12,7 +12,7 @@ const StartScreen = ({ onStart }: StartScreenProps) => {
   return (
     <>
       <FlexBox flexDirection="column" gap={24} sx={{ flex: 1, padding: '48px 20px 24px' }}>
-        <ImagePlaceholder emoji="✏️" />
+        <ImagePlaceholder src={START_IMAGE} alt="디자이너 유형 테스트" emoji="✏️" />
 
         <FlexBox flexDirection="column" gap={8}>
           <Typography variant="label1" weight="bold" color="semantic.foreground.brand.primary">

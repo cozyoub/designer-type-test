@@ -25,7 +25,7 @@ const ResultScreen = ({ type, onRestart }: ResultScreenProps) => {
       <TopNavigation>테스트 결과</TopNavigation>
 
       <FlexBox flexDirection="column" gap={24} sx={{ flex: 1, padding: '16px 20px 24px' }}>
-        <ImagePlaceholder emoji={result.emoji} />
+        <ImagePlaceholder src={result.image} alt={result.name} emoji={result.emoji} />
 
         <FlexBox flexDirection="column" gap={8} alignItems="center">
           <Typography variant="label1" color="semantic.foreground.neutral.secondary">
